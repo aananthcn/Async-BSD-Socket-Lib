@@ -52,7 +52,7 @@ set(sample_dir
 include_directories(${include_dir})
 
 add_library(
-  async_bsd_socket_lib
+  async_bsd_socket_lib SHARED
   ${source_dir}/communicator.cpp
   ${source_dir}/network_socket.cpp
   ${source_dir}/poller.cpp
@@ -61,6 +61,11 @@ add_library(
   ${source_dir}/udp_client.cpp
   ${source_dir}/fifo_sender.cpp
   ${source_dir}/fifo_receiver.cpp
+)
+
+set_target_properties(async_bsd_socket_lib PROPERTIES
+    VERSION 0.1
+    SOVERSION 0
 )
 
 target_include_directories(async_bsd_socket_lib
