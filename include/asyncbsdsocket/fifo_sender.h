@@ -4,6 +4,7 @@
 #include <sys/stat.h>
 #include <string>
 #include <array>
+#include <cstdint>
 #include "./communicator.h"
 
 namespace AsyncBsdSocketLib
